@@ -1,0 +1,137 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --CyanRGBA: rgb(0, 254, 247,.5);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --box-shadow: hsl(216, 58%, 10%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-dark-blue-main);
+}
+
+.container {
+    width: 22rem;
+    padding: 1.5rem;
+    background-color: var(--Very-dark-blue-card);
+    border-radius: 15px;
+    box-shadow: 0px 10px 0px 15px var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.equilibrium {
+    width: 19rem;
+    height: 19rem;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 19rem;
+    height: 19rem;
+    border-radius: 15px;
+    background-color: var(--CyanRGBA);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
+
+.overlay:hover {
+    opacity: 1;
+    transition: .2s;
+}
+
+h2 {
+    color: var(--White);
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+h2:hover {
+    color: var(--Cyan);
+}
+
+p {
+    font-size: 18px;
+    color: var(--Soft-blue);
+}
+
+.horizontal-part {
+    display: flex;
+    gap: 7rem;
+}
+
+.ethereum {
+    color: var(--Cyan);
+    font-weight: 600;
+    gap: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    color: var(--Soft-blue);
+    gap: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    margin-top: -.1rem;
+    width: 100%;
+    border: .5px solid var(--Very-dark-blue-line);
+    background-color: var(--Very-dark-blue-line);
+}
+
+.credits {
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Soft-blue);
+    margin-bottom: .3rem;
+}
+
+.credits > img {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+span {
+    margin-left: .3rem;
+    color: var(--White);
+    cursor: pointer;
+}
+
+span:hover {
+    color: var(--Cyan);
+}
